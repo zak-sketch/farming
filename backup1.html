@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fish Farm Kenya | Sustainable Aquaculture & Fish Farming Solutions</title>
+  <link rel="icon" href="fish-farm-logo.png" type="image/png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Custom Tailwind Configuration for Brand Colors -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'aqua-blue': '#1a5276',
+            'aqua-blue-light': '#2874a6',
+            'aqua-green': '#27ae60',
+            'aqua-green-light': '#2ecc71',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Fish Farm Kenya provides sustainable aquaculture solutions, fish farming equipment, and expert training for profitable fish farming across Kenya." />
+  <meta name="keywords"
+    content="fish farming Kenya, aquaculture Kenya, tilapia farming, fish feeds Kenya, fish pond construction, fish farming training Kenya" />
+  <meta name="author" content="Fish Farm Kenya" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="en" />
+
+  <meta property="og:title" content="Fish Farm Kenya | Sustainable Aquaculture Solutions" />
+  <meta property="og:description"
+    content="Kenya's leading provider of fish farming solutions, equipment, and training for profitable aquaculture." />
+  <meta property="og:image" content="https://fishfarmkenya.com/images/og-image.jpg" />
+  <meta property="og:url" content="https://fishfarmkenya.com" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fish Farm Kenya" />
+  <meta name="twitter:description" content="Sustainable Aquaculture Solutions for Kenya" />
+  <meta name="twitter:image" content="https://fishfarmkenya.com/images/twitter-card.jpg" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://fishfarmkenya.com/" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+  <!-- Structured Data (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Fish Farm Kenya",
+    "url": "https://fishfarmkenya.com",
+    "logo": "https://fishfarmkenya.com/fish-farm-logo.png",
+    "sameAs": [
+      "https://www.facebook.com/fishfarmkenya",
+      "https://www.instagram.com/fishfarmkenya",
+      "https://www.linkedin.com/company/fishfarmkenya"
+    ],
+    "description": "Fish Farm Kenya is a leading aquaculture company providing fish farming solutions, equipment, and training across Kenya."
+  }
+  </script>
+  
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom CSS for Navbar Enhancements -->
+  <style>
+    /* Smooth transitions for navbar */
+    .navbar {
+      transition: all 0.3s ease;
+    }
+    
+    /* Mobile menu animation */
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .mobile-menu {
+      animation: slideDown 0.3s ease forwards;
+    }
+    
+    /* Underline animation for nav links */
+    .nav-link {
+      position: relative;
+    }
+    
+    .nav-link:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: #27ae60;
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover:after {
+      width: 100%;
+    }
+    
+    .nav-link.active:after {
+      width: 100%;
+    }
+    
+    /* Sticky navbar effect */
+    .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Water wave effect for hero section */
+    .wave-bg {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .wave-bg:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 20%;
+      background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%23ffffff" opacity=".25"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="%23ffffff" opacity=".5"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%23ffffff"/></svg>');
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans pt-16 md:pt-0">
+
+  <!-- Enhanced Navbar -->
+  <nav id="navbar" class="navbar bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo/Brand -->
+        <div class="flex-shrink-0 flex items-center">
+          <a href="/" class="flex items-center gap-3">
+            <img src="fish-farm-logo.png" alt="Fish Farm Kenya Logo" class="h-10 w-10 md:h-12 md:w-12 rounded-full shadow-md border-2 border-aqua-blue p-1 bg-white">
+            <span class="text-xl md:text-2xl font-bold text-aqua-blue">Fish Farm Kenya</span>
+          </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-aqua-blue hover:text-aqua-green active">Home</a>
+          <a href="#services" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-aqua-blue hover:text-aqua-green">Services</a>
+          <a href="#training" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-aqua-blue hover:text-aqua-green">Training</a>
+          <a href="#gallery" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-aqua-blue hover:text-aqua-green">Gallery</a>
+          <a href="#contact" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-aqua-blue hover:text-aqua-green">Contact</a>
+          <a href="tel:0723456789" class="ml-4 px-4 py-2 bg-aqua-green text-white rounded-md hover:bg-aqua-green-light transition flex items-center gap-2">
+            <i class="fas fa-phone-alt"></i>
+            <span>Call Us</span>
+          </a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-aqua-blue hover:text-aqua-green focus:outline-none">
+            <span class="sr-only">Open main menu</span>
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu hidden md:hidden bg-white border-t border-gray-200">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-aqua-blue bg-gray-50">Home</a>
+        <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-aqua-blue hover:bg-gray-50">Services</a>
+        <a href="#training" class="block px-3 py-2 rounded-md text-base font-medium text-aqua-blue hover:bg-gray-50">Training</a>
+        <a href="#gallery" class="block px-3 py-2 rounded-md text-base font-medium text-aqua-blue hover:bg-gray-50">Gallery</a>
+        <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-aqua-blue hover:bg-gray-50">Contact</a>
+        <a href="tel:0723456789" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-aqua-green hover:bg-aqua-green-light text-center">
+          <i class="fas fa-phone-alt mr-2"></i>Call Now
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Water Wave Effect -->
+  <header class="bg-aqua-blue text-white p-10 wave-bg">
+    <div class="max-w-7xl mx-auto relative z-10">
+      <h1 class="text-4xl font-bold mb-4">Sustainable Fish Farming Solutions in Kenya</h1>
+      <p class="text-lg mb-6">Expert aquaculture services, quality fingerlings, and professional training for profitable fish farming</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#contact" class="px-6 py-3 bg-aqua-green text-white rounded-md hover:bg-aqua-green-light transition font-medium">
+          Get Started <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+        <a href="#services" class="px-6 py-3 bg-white text-aqua-blue rounded-md hover:bg-gray-100 transition font-medium">
+          Our Services
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Services Section -->
+  <section id="services" class="py-12 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-2">Our Aquaculture Services</h2>
+      <p class="text-center text-gray-600 mb-10">Comprehensive solutions for your fish farming needs</p>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+          <div class="text-aqua-blue text-4xl mb-4">
+            <i class="fas fa-fish"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2 text-aqua-blue">Quality Fingerlings</h3>
+          <p class="text-gray-600">Healthy, fast-growing tilapia and catfish fingerlings from our certified hatcheries</p>
+        </div>
+        
+        <!-- Service 2 -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+          <div class="text-aqua-blue text-4xl mb-4">
+            <i class="fas fa-tractor"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2 text-aqua-blue">Pond Construction</h3>
+          <p class="text-gray-600">Professional design and construction of fish ponds for optimal production</p>
+        </div>
+        
+        <!-- Service 3 -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+          <div class="text-aqua-blue text-4xl mb-4">
+            <i class="fas fa-utensils"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2 text-aqua-blue">Fish Feeds</h3>
+          <p class="text-gray-600">High-quality, nutritionally balanced feeds for all growth stages</p>
+        </div>
+        
+        <!-- Service 4 -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+          <div class="text-aqua-blue text-4xl mb-4">
+            <i class="fas fa-vial"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2 text-aqua-blue">Water Testing</h3>
+          <p class="text-gray-600">Comprehensive water quality analysis and management solutions</p>
+        </div>
+        
+        <!-- Service 5 -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+          <div class="text-aqua-blue text-4xl mb-4">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2 text-aqua-blue">Farm Management</h3>
+          <p class="text-gray-600">Professional farm management services for optimal productivity</p>
+        </div>
+        
+        <!-- Service 6 -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+          <div class="text-aqua-blue text-4xl mb-4">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2 text-aqua-blue">Market Linkages</h3>
+          <p class="text-gray-600">Reliable market connections for your fish produce</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Training Section -->
+  <section id="training" class="py-14 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="md:flex items-center gap-10">
+        <div class="md:w-1/2 mb-8 md:mb-0">
+          <img src="fish-farming-training.jpg" alt="Fish Farming Training" class="rounded-lg shadow-md w-full">
+        </div>
+        <div class="md:w-1/2">
+          <h2 class="text-3xl font-bold mb-4 text-aqua-blue">Professional Fish Farming Training</h2>
+          <p class="text-lg mb-6 text-gray-700">Our comprehensive training programs equip you with practical knowledge for successful aquaculture:</p>
+          
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start">
+              <i class="fas fa-check text-aqua-green mt-1 mr-2"></i>
+              <span>Basic & advanced fish farming techniques</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-aqua-green mt-1 mr-2"></i>
+              <span>Pond construction and management</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-aqua-green mt-1 mr-2"></i>
+              <span>Water quality management</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-aqua-green mt-1 mr-2"></i>
+              <span>Fish health and disease control</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-aqua-green mt-1 mr-2"></i>
+              <span>Business planning for aquaculture</span>
+            </li>
+          </ul>
+          
+          <a href="#contact" class="px-6 py-3 bg-aqua-green text-white rounded-md hover:bg-aqua-green-light transition font-medium inline-block">
+            Enroll Now <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-12 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-2 text-aqua-blue">Our Fish Farming Projects</h2>
+      <p class="text-center text-gray-600 mb-10">See our successful aquaculture implementations across Kenya</p>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <img src="fish-pond-1.jpg" alt="Fish Pond" class="rounded-lg shadow-sm hover:shadow-md transition h-48 w-full object-cover">
+        <img src="fish-feeding.jpg" alt="Fish Feeding" class="rounded-lg shadow-sm hover:shadow-md transition h-48 w-full object-cover">
+        <img src="fingerlings.jpg" alt="Fingerlings" class="rounded-lg shadow-sm hover:shadow-md transition h-48 w-full object-cover">
+        <img src="training-session.jpg" alt="Training Session" class="rounded-lg shadow-sm hover:shadow-md transition h-48 w-full object-cover">
+        <img src="harvesting.jpg" alt="Fish Harvesting" class="rounded-lg shadow-sm hover:shadow-md transition h-48 w-full object-cover">
+        <img src="pond-construction.jpg" alt="Pond Construction" class="rounded-lg shadow-sm hover:shadow-md transition h-48 w-full object-cover">
+        <img src="fish-market.jpg" alt="Fish Market" class="rounded-lg shadow-sm hover:shadow-md transition h-48 w-full object-cover">
+        <img src="farm-visit.jpg" alt="Farm Visit" class="rounded-lg shadow-sm hover:shadow-md transition h-48 w-full object-cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-14 bg-aqua-blue text-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-10">What Our Clients Say</h2>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-white text-gray-800 p-6 rounded-lg shadow-md">
+          <div class="flex items-center mb-4">
+            <div class="text-aqua-blue text-2xl mr-3">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <p class="italic">"Fish Farm Kenya transformed my small pond into a profitable enterprise. Their fingerlings grow fast and their training was invaluable."</p>
+          </div>
+          <div class="flex items-center">
+            <img src="client-1.jpg" alt="Client" class="h-10 w-10 rounded-full mr-3">
+            <div>
+              <h4 class="font-bold">James Mwangi</h4>
+              <p class="text-sm text-gray-600">Nakuru County</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="bg-white text-gray-800 p-6 rounded-lg shadow-md">
+          <div class="flex items-center mb-4">
+            <div class="text-aqua-blue text-2xl mr-3">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <p class="italic">"The professional pond construction and ongoing support have made my fish farming business thrive beyond expectations."</p>
+          </div>
+          <div class="flex items-center">
+            <img src="client-2.jpg" alt="Client" class="h-10 w-10 rounded-full mr-3">
+            <div>
+              <h4 class="font-bold">Sarah Otieno</h4>
+              <p class="text-sm text-gray-600">Kisumu County</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="bg-white text-gray-800 p-6 rounded-lg shadow-md">
+          <div class="flex items-center mb-4">
+            <div class="text-aqua-blue text-2xl mr-3">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <p class="italic">"Their training program gave me the confidence to start fish farming. Now I'm supplying hotels in my area consistently."</p>
+          </div>
+          <div class="flex items-center">
+            <img src="client-3.jpg" alt="Client" class="h-10 w-10 rounded-full mr-3">
+            <div>
+              <h4 class="font-bold">David Kamau</h4>
+              <p class="text-sm text-gray-600">Kiambu County</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-12 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-2 text-aqua-blue">Contact Fish Farm Kenya</h2>
+      <p class="text-center text-gray-600 mb-10">Get in touch for fingerlings, training, or consultancy services</p>
+      
+      <div class="grid md:grid-cols-2 gap-10">
+        <div>
+          <h3 class="text-xl font-bold mb-4 text-aqua-blue">Our Contacts</h3>
+          
+          <div class="space-y-4">
+            <div class="flex items-start">
+              <div class="text-aqua-green text-xl mr-3 mt-1">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <h4 class="font-bold">Head Office</h4>
+                <p class="text-gray-600">Aqua Plaza, 3rd Floor<br>Nairobi, Kenya</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="text-aqua-green text-xl mr-3 mt-1">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div>
+                <h4 class="font-bold">Phone</h4>
+                <p class="text-gray-600">
+                  <a href="tel:0723456789" class="hover:text-aqua-green transition">0723 456 789</a><br>
+                  <a href="tel:0734567890" class="hover:text-aqua-green transition">0734 567 890</a>
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="text-aqua-green text-xl mr-3 mt-1">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <h4 class="font-bold">Email</h4>
+                <p class="text-gray-600">
+                  <a href="mailto:info@fishfarmkenya.com" class="hover:text-aqua-green transition">info@fishfarmkenya.com</a><br>
+                  <a href="mailto:sales@fishfarmkenya.com" class="hover:text-aqua-green transition">sales@fishfarmkenya.com</a>
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="text-aqua-green text-xl mr-3 mt-1">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div>
+                <h4 class="font-bold">Working Hours</h4>
+                <p class="text-gray-600">Monday - Friday: 8:00 AM - 5:00 PM<br>Saturday: 9:00 AM - 2:00 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-bold mb-4 text-aqua-blue">Send Us a Message</h3>
+          <form class="space-y-4">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+              <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-aqua-green focus:border-aqua-green">
+            </div>
+            
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+              <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-aqua-green focus:border-aqua-green">
+            </div>
+            
+            <div>
+              <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+              <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-aqua-green focus:border-aqua-green">
+            </div>
+            
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+              <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-aqua-green focus:border-aqua-green"></textarea>
+            </div>
+            
+            <button type="submit" class="px-6 py-3 bg-aqua-green text-white rounded-md hover:bg-aqua-green-light transition font-medium w-full">
+              Send Message <i class="fas fa-paper-plane ml-2"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-aqua-blue text-white p-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-4 gap-8 mb-8">
+        <div>
+          <h3 class="text-lg font-bold mb-4">Fish Farm Kenya</h3>
+          <p class="text-sm">Leading aquaculture solutions provider in Kenya, specializing in fish farming training, pond construction, and quality fingerlings.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-sm hover:text-aqua-green-light transition">Home</a></li>
+            <li><a href="#services" class="text-sm hover:text-aqua-green-light transition">Services</a></li>
+            <li><a href="#training" class="text-sm hover:text-aqua-green-light transition">Training</a></li>
+            <li><a href="#gallery" class="text-sm hover:text-aqua-green-light transition">Gallery</a></li>
+            <li><a href="#contact" class="text-sm hover:text-aqua-green-light transition">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-bold mb-4">Services</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-sm hover:text-aqua-green-light transition">Fingerlings Supply</a></li>
+            <li><a href="#" class="text-sm hover:text-aqua-green-light transition">Pond Construction</a></li>
+            <li><a href="#" class="text-sm hover:text-aqua-green-light transition">Fish Feeds</a></li>
+            <li><a href="#" class="text-sm hover:text-aqua-green-light transition">Farm Management</a></li>
+            <li><a href="#" class="text-sm hover:text-aqua-green-light transition">Training Programs</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+          <p class="text-sm mb-3">Subscribe for fish farming tips and updates</p>
+          <form class="flex">
+            <input type="email" placeholder="Your email" class="px-3 py-2 text-gray-800 rounded-l-md w-full text-sm">
+            <button type="submit" class="bg-aqua-green hover:bg-aqua-green-light px-3 py-2 rounded-r-md text-sm">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+          <div class="flex space-x-4 mt-4 text-xl">
+            <a href="#" class="hover:text-aqua-green-light transition"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="hover:text-aqua-green-light transition"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="hover:text-aqua-green-light transition"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="hover:text-aqua-green-light transition"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="border-t border-aqua-blue-light pt-6 text-center text-sm">
+        <p>&copy; 2025 Fish Farm Kenya. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="fixed bottom-6 right-6 bg-aqua-green text-white p-3 rounded-full shadow-lg hidden hover:bg-aqua-green-light transition">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript for Enhanced Functionality -->
+  <script>
+    // Mobile Menu Toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+    
+    // Sticky Navbar with Scroll Effect
+    const navbar = document.getElementById('navbar');
+    let lastScrollTop = 0;
+    
+    window.addEventListener('scroll', () => {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+      // Show/hide back to top button
+      const backToTop = document.getElementById('back-to-top');
+      if (scrollTop > 300) {
+        backToTop.classList.remove('hidden');
+      } else {
+        backToTop.classList.add('hidden');
+      }
+      
+      // Navbar scroll behavior
+      if (scrollTop > lastScrollTop) {
+        // Scrolling down
+        if (scrollTop > 100) {
+          navbar.classList.add('shadow-lg');
+          navbar.classList.remove('shadow-md');
+        }
+      } else {
+        // Scrolling up
+        if (scrollTop > 100) {
+          navbar.classList.add('shadow-lg');
+          navbar.classList.remove('shadow-md');
+        }
+      }
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+    
+    // Back to top button
+    document.getElementById('back-to-top').addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Set active nav link based on scroll position
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    window.addEventListener('scroll', () => {
+      let current = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        if (pageYOffset >= (sectionTop - 150)) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+
+  <!-- Your existing scripts (Tawk.to, WhatsApp, GTM) -->
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/67adef74825083258e149cdc/1ijvmunvo';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+  <!--End of Tawk.to Script-->
+
+  <script type="text/javascript">
+    (function () {
+      var options = {
+        whatsapp: "254723456789", // Replace with fish farm WhatsApp number
+        call_to_action: "Chat about fish farming", 
+        position: "left",
+      };
+      var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+      var s =
