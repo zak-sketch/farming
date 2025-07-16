@@ -146,6 +146,15 @@
       border-left: 4px solid #27ae60;
       background-color: #f8f9fa;
     }
+
+    /* Team card hover effect */
+    .team-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .team-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
   </style>
 </head>
 
@@ -495,31 +504,71 @@
         </div>
       </div>
       
-      <h3 class="text-2xl font-bold mb-6 text-center text-aqua-blue">Our Team</h3>
+      <h3 class="text-2xl font-bold mb-6 text-center text-aqua-blue">Meet Our Expert Team</h3>
       
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Team Member 1 -->
-        <div class="bg-white p-6 rounded-lg shadow-sm text-center">
-          <img src="gilbert-gitamo.jpg" alt="Gilbert Gitamo" class="h-32 w-32 rounded-full mx-auto mb-4 object-cover border-4 border-aqua-blue">
+      <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- Gilbert Gitamo -->
+        <div class="team-card bg-white p-6 rounded-lg shadow-sm text-center transition-all">
+          <img src="gilbert.jpg" alt="Gilbert Gitamo" class="h-32 w-32 rounded-full mx-auto mb-4 object-cover border-4 border-aqua-blue">
           <h4 class="text-xl font-bold mb-1 text-aqua-blue">Gilbert Gitamo</h4>
-          <p class="text-sm text-gray-600 mb-3">Technical Specialist</p>
-          <p class="text-gray-700">Over a decade in aquaculture across East Africa; expert in hatchery management, marketing, and fish feed.</p>
+          <p class="text-sm text-gray-600 mb-3">Aquaculture Technical Specialist</p>
+          <p class="text-gray-700 text-sm">With over 15 years of aquaculture experience across East Africa, Gilbert is an expert in hatchery management, fish nutrition and feed strategies. At Jambo Aqua Tech, Gilbert leads business strategy, farmer support, and regional partnerships.</p>
         </div>
         
-        <!-- Team Member 2 -->
-        <div class="bg-white p-6 rounded-lg shadow-sm text-center">
-          <img src="joeline-ezekiel.jpg" alt="Joeline Ezekiel" class="h-32 w-32 rounded-full mx-auto mb-4 object-cover border-4 border-aqua-blue">
+        <!-- Joeline Ezekiel -->
+        <div class="team-card bg-white p-6 rounded-lg shadow-sm text-center transition-all">
+          <img src="joeline.jpg" alt="Joeline Ezekiel" class="h-32 w-32 rounded-full mx-auto mb-4 object-cover border-4 border-aqua-blue">
           <h4 class="text-xl font-bold mb-1 text-aqua-blue">Joeline Ezekiel</h4>
-          <p class="text-sm text-gray-600 mb-3">Director & Aquaculture Expert</p>
-          <p class="text-gray-700">Academic and practical background in aquaculture systems, research, fish nutrition, and sustainability.</p>
+          <p class="text-sm text-gray-600 mb-3">Aquaculture Expert & Technical Trainer</p>
+          <p class="text-gray-700 text-sm">Joeline brings both academic and hands-on expertise in aquaculture systems, fish nutrition, and sustainability. Passionate about empowering women and youth, she is dedicated to nurturing inclusive aquaculture enterprises across the region.</p>
         </div>
         
-        <!-- Team Member 3 -->
-        <div class="bg-white p-6 rounded-lg shadow-sm text-center">
-          <img src="rita-kerubo.jpg" alt="Rita Kerubo" class="h-32 w-32 rounded-full mx-auto mb-4 object-cover border-4 border-aqua-blue">
+        <!-- Rita Kerubo -->
+        <div class="team-card bg-white p-6 rounded-lg shadow-sm text-center transition-all">
+          <img src="rita.jpg" alt="Rita Kerubo" class="h-32 w-32 rounded-full mx-auto mb-4 object-cover border-4 border-aqua-blue">
           <h4 class="text-xl font-bold mb-1 text-aqua-blue">Rita Kerubo</h4>
-          <p class="text-sm text-gray-600 mb-3">Director & IT Specialist</p>
-          <p class="text-gray-700">Passionate about aquaculture's potential in addressing food security, brings IT and organizational expertise.</p>
+          <p class="text-sm text-gray-600 mb-3">IT Specialist & Digital Innovation Lead</p>
+          <p class="text-gray-700 text-sm">A strong believer in aquaculture's role in solving food security, Rita drives tech-based innovation in fish farming. She is the architect behind JAT Virtual Manager™, a precision aquaculture tool designed to make fish farming smarter and data-driven.</p>
+        </div>
+        
+        <!-- Esther Akoth -->
+        <div class="team-card bg-white p-6 rounded-lg shadow-sm text-center transition-all">
+          <img src="esther.jpg" alt="Esther Akoth" class="h-32 w-32 rounded-full mx-auto mb-4 object-cover border-4 border-aqua-blue">
+          <h4 class="text-xl font-bold mb-1 text-aqua-blue">Esther Akoth</h4>
+          <p class="text-sm text-gray-600 mb-3">Hatchery Management Specialist</p>
+          <p class="text-gray-700 text-sm">Esther oversees daily hatchery operations, ensuring consistent production of high-quality fingerlings. With a passion for genetics, she focuses on improving early-stage survival rates. Esther champions training to promote backyard and urban aquaculture.</p>
+        </div>
+        
+        <!-- Lucas Otieno -->
+        <div class="team-card bg-white p-6 rounded-lg shadow-sm text-center transition-all">
+          <img src="lucas.jpg" alt="Lucas Otieno" class="h-32 w-32 rounded-full mx-auto mb-4 object-cover border-4 border-aqua-blue">
+          <h4 class="text-xl font-bold mb-1 text-aqua-blue">Lucas Otieno</h4>
+          <p class="text-sm text-gray-600 mb-3">Aquaculture Systems Engineer</p>
+          <p class="text-gray-700 text-sm">Lucas has spent over two years refining skills in broodstock management, system maintenance, and disease prevention. He is the founder of the Jambo Youth in Aquaculture initiative, inspiring the next generation to embrace fish farming.</p>
+        </div>
+        
+        <!-- Hellen Kiptoo -->
+        <div class="team-card bg-white p-6 rounded-lg shadow-sm text-center transition-all">
+          <img src="hellen.jpg" alt="Hellen Kiptoo" class="h-32 w-32 rounded-full mx-auto mb-4 object-cover border-4 border-aqua-blue">
+          <h4 class="text-xl font-bold mb-1 text-aqua-blue">Hellen Kiptoo</h4>
+          <p class="text-sm text-gray-600 mb-3">Fingerlings Production Assistant</p>
+          <p class="text-gray-700 text-sm">With 2 years of experience, Hellen is dedicated to solving the region's fingerling shortage. She focuses on optimizing RAS systems to produce healthy, disease-free fingerlings in large volumes, making her vital to Jambo's mission.</p>
+        </div>
+        
+        <!-- Duncan Ochieng -->
+        <div class="team-card bg-white p-6 rounded-lg shadow-sm text-center transition-all">
+          <img src="duncan.jpg" alt="Duncan Ochieng" class="h-32 w-32 rounded-full mx-auto mb-4 object-cover border-4 border-aqua-blue">
+          <h4 class="text-xl font-bold mb-1 text-aqua-blue">Duncan Ochieng</h4>
+          <p class="text-sm text-gray-600 mb-3">Broodstock Supervisor</p>
+          <p class="text-gray-700 text-sm">Once a fisherman on Lake Victoria, Duncan now manages broodstock selection and care. His deep understanding of fish behavior and breeding ensures top genetic quality and high fecundity for consistent fry production.</p>
+        </div>
+        
+        <!-- Maxwell Ochieng -->
+        <div class="team-card bg-white p-6 rounded-lg shadow-sm text-center transition-all">
+          <img src="max.jpg" alt="Maxwell Ochieng" class="h-32 w-32 rounded-full mx-auto mb-4 object-cover border-4 border-aqua-blue">
+          <h4 class="text-xl font-bold mb-1 text-aqua-blue">Maxwell Ochieng</h4>
+          <p class="text-sm text-gray-600 mb-3">Logistics & Youth Engagement</p>
+          <p class="text-gray-700 text-sm">Maxwell ensures safe delivery of fingerlings to farmers. Passionate about youth empowerment, he recruits and trains young people in fingerling nursing through the Jambo Youth in Aquaculture initiative.</p>
         </div>
       </div>
     </div>
